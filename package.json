@@ -4,7 +4,10 @@
   "description": "this project is talking about vision technologies that we are going to launch in the new few coming years, this is going to help users to some daily tasks and activities.  The first feature among a million of this project is to update the user on every release of new technologies in the whole world It will give the user the ability to extract an event or anything posted from a link provided to the platform It will be an Open-source project allowing every dev to collaborate on some different projects Stay tuned for more features from our company",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open ",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.38.1"
+
   }
 }
