@@ -9,7 +9,7 @@ export const technologies = [
 
   {
     id: 'project_1',
-    image:{
+    image: {
       img: neural,
       altText: 'project 1 preview image',
     },
@@ -17,12 +17,12 @@ export const technologies = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint error id nam eius iusto perferendis molestiae,',
     comment: {
       user: 'topaz',
-      insight: 'this the comment your comment'
+      insight: 'this the comment your comment',
     },
   },
   {
     id: 'project_2',
-    image:{
+    image: {
       img: sofia,
       altText: 'project 2 preview image',
     },
@@ -30,12 +30,12 @@ export const technologies = [
     description: 'Main principles of object-oriented programming are abstraction, encapsulation, inheritance, and polymorphism.',
     comment: {
       user: 'topaz',
-      insight: 'this the comment your comment'
+      insight: 'this the comment your comment',
     },
   },
   {
     id: 'project_3',
-    image:{
+    image: {
       img: constr,
       altText: 'project 3 preview image',
     },
@@ -43,12 +43,12 @@ export const technologies = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint error id nam eius iusto perferendis molestiae,',
     comment: {
       user: 'topaz',
-      insight: 'this the comment your comment'
+      insight: 'this the comment your comment',
     },
   },
   {
     id: 'project_4',
-    image:{
+    image: {
       img: micro,
       altText: 'project 4 preview image',
     },
@@ -56,12 +56,12 @@ export const technologies = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint error id nam eius iusto perferendis molestiae,',
     comment: {
       user: 'topaz',
-      insight: 'this the comment your comment'
+      insight: 'this the comment your comment',
     },
   },
   {
     id: 'project_5',
-    image:{
+    image: {
       img: robot,
       altText: 'project 5 preview image',
     },
@@ -69,12 +69,12 @@ export const technologies = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint error id nam eius iusto perferendis molestiae,',
     comment: {
       user: 'topaz',
-      insight: 'this the comment your comment'
+      insight: 'this the comment your comment',
     },
   },
   {
     id: 'project_6',
-    image:{
+    image: {
       img: pro,
       altText: 'project 6 preview image',
     },
@@ -82,10 +82,10 @@ export const technologies = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint error id nam eius iusto perferendis molestiae,',
     comment: {
       user: 'topaz',
-      insight: 'this the comment your comment'
+      insight: 'this the comment your comment',
     },
   },
-]
+];
 
 const render = () => {
   const ul = document.querySelector('.vission-tech');

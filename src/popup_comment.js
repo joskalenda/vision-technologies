@@ -1,7 +1,7 @@
-export const createPopup = (object) => {
+const createPopup = (object) => {
   const popupCard = document.createElement('li');
   const container = document.querySelector('.pop--container');
-  container.innerHTML = ''
+  container.innerHTML = '';
   popupCard.classList.add('popup--card');
   popupCard.id = object.id;
   popupCard.innerHTML = `
@@ -27,5 +27,7 @@ export const createPopup = (object) => {
       <button type="button">Comment</button>
     </div>`;
 
-    return popupCard;
+  return popupCard;
 };
+
+export default createPopup;
