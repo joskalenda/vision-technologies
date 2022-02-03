@@ -1,14 +1,10 @@
-import render from "./homeRender";
+import renderTech from './homeRender.js';
 
-// render
-const BASE_URL = 'https://api.spaceflightnewsapi.net/v3/articles';
-const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-const commentsUrl = '/apps/Uinv3HFYXneji5y5pk1g/comments';
-const likesUrl = '/apps/Uinv3HFYXneji5y5pk1g/likes';
-
-export default getResponse = async () => {
-  const get = await fetch(BASE_URL);
-  const response = await get.json();
-  render(response);
+const getTechs = async () => {
+  const response = await fetch('https://api.spaceflightnewsapi.net/v3/articles');
+  response.json().then((json) => {
+    renderTech(json);
+  });
 };
 
+export default getTechs;
