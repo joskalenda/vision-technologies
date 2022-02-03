@@ -4,7 +4,6 @@ import robot from './assets/robot.jpeg';
 import sofia from './assets/sofia.jpeg';
 import constr from './assets/constr.jpeg';
 import pro from './assets/pro.jpeg';
-
 export const technologies = [
 
   {
@@ -111,3 +110,5 @@ const render = () => {
 };
 
 export default render;
+
+

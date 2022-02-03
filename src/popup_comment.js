@@ -1,4 +1,4 @@
-const createPopup = (object) => {
+export const createPopup = (object) => {
   const popupCard = document.createElement('li');
   const container = document.querySelector('.pop--container');
   container.innerHTML = '';
@@ -11,23 +11,23 @@ const createPopup = (object) => {
     </div>
     <h3 class="pop--tit">${object.name}</h3>
     <p class="pop--des">${object.description}</p><hr>
-    <div class="see--comment" >
-      <p class="count--com">Commment {0}</p>
-      <div>
-        <p class="date">date</p>
-        <p class="name">name</p>
-        <p class="comment">comment</p>
-      </div>
+    <div class="see--comment">
+    <div>
+    <p class="count--com"></p>
+      <p class="date"></p>
+      <p class="name"></p>
+      <p class="comment"></p>
+    </div>
     </div><hr>
-    <div class="pop--put">
-      <h3>Leave a Comment !</h3>
-      <p class="error" >display error</p>
-      <input type="text" placeholder="Inter your name" maxlength="15">
-      <input class="insight" type="text" placeholder="Enter your insigths">
-      <button type="button">Comment</button>
-    </div>`;
+    <form>
+      <div class="pop--put">
+        <h3>Leave a Comment !</h3>
+        <p class="error" >display error</p>
+        <input id ="usernameInput" type="text" placeholder="Inter your name" maxlength="15">
+        <input id = "commentInput" class="insight" type="text" placeholder="Enter your insigths">
+        <button id= "btn" type="submit">Comment</button>
+      </div>
+    </form>`;
 
   return popupCard;
 };
-
-export default createPopup;
