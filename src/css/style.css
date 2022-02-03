@@ -262,13 +262,13 @@ section.tech-views .tham {
 section.tech-views ul {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-auto-rows: auto;
   grid-row-gap: 8px;
-  align-items: center;
-  align-content: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  background: black;
 }
 
 section.tech-views .techs ul li {
@@ -279,6 +279,13 @@ section.tech-views .techs ul li {
   background: white;
   cursor: pointer;
   width: 17rem;
+}
+
+.body > p {
+  height: 8rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 section.tech-views .techs ul li h3 {
@@ -468,6 +475,10 @@ section.tech-views .techs {
   border-radius: 6px;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .pop--put button {
   color: rgba(48, 46, 46, 0.733);
   font-size: 15px;
@@ -486,6 +497,7 @@ section.tech-views .techs {
 @media screen and (min-width: 992px) {
   section.tech-views ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     max-width: 1200px;
   }
 
