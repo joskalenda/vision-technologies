@@ -30,5 +30,5 @@ const renderTech = (technologies) => {
     });
   });
 };
-
+// this a comment
 export default renderTech;
