@@ -268,7 +268,6 @@ section.tech-views ul {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background: black;
 }
 
 section.tech-views .techs ul li {
@@ -349,6 +348,7 @@ section.tech-views .techs {
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .over--lay {
@@ -371,11 +371,23 @@ section.tech-views .techs {
 #close {
   padding: 0;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -4px;
+  right: -150px;
+  width: 40%;
   font-weight: bold;
   cursor: pointer;
   color: rgb(129, 127, 127);
+  margin-bottom: 40px;
+}
+
+#close i {
+  padding: 14px;
+  font-weight: bolder;
+  font-size: 29px;
+}
+
+#close i:hover {
+  color: red;
 }
 
 .pop--img {
@@ -383,7 +395,7 @@ section.tech-views .techs {
   border-radius: 8px;
   width: 850px;
   height: 400px;
-  margin: 10px auto;
+  margin: 25px auto;
 }
 
 .pop--img img {

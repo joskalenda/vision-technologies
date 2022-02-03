@@ -1,16 +1,16 @@
-export const createPopup = (object) => {
+const createPopup = (object) => {
   const popupCard = document.createElement('li');
   const container = document.querySelector('.pop--container');
   container.innerHTML = '';
   popupCard.classList.add('popup--card');
   popupCard.id = object.id;
   popupCard.innerHTML = `
-    <p id="close">Xlose</p>
+    <p id="close"><i class="fas fa-times assets-color"></i></p>
     <div class="pop--img">
-      <img src="${object.image.img}" alt="${object.image.altText}">
+      <img src="${object.imageUrl}" alt="image_1">
     </div>
-    <h3 class="pop--tit">${object.name}</h3>
-    <p class="pop--des">${object.description}</p><hr>
+    <h3 class="pop--tit">${object.title}</h3>
+    <p class="pop--des">${object.summary}</p><hr>
     <div class="see--comment">
     <div>
     <p class="count--com"></p>
@@ -28,6 +28,12 @@ export const createPopup = (object) => {
         <button id= "btn" type="submit">Comment</button>
       </div>
     </form>`;
+  container.appendChild(popupCard);
 
-  return popupCard;
+  const closeButtons = document.querySelector('#close');
+  closeButtons.addEventListener('click', () => {
+    document.querySelector('.pop--container.active').classList.remove('active');
+  });
 };
+
+export default createPopup;
