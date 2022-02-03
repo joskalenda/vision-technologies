@@ -1,0 +1,536 @@
+:root {
+  --primary: #6167f2;
+  --primary-txt: #1f2937;
+  --secondary-txt: #1f2937;
+  --pri-bd: #bc6ce9;
+
+  /* --tertiary: #; */
+
+  /* --background: #; */
+
+  /* --dark-text: ; */
+  --bg-white: #fff;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  background-image: linear-gradient(rgb(255 255 255), rgb(209 213 219));
+}
+
+.bg-white {
+  background: var(--bg-white);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.flex {
+  display: flex;
+}
+
+.mr-1 {
+  margin: 24px;
+}
+
+.pd0 {
+  padding: 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.color-sec-text {
+  color: var(--secondary-txt);
+}
+
+.d-flex-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ff-1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.ff-2 {
+  font-family: 'Poiret One', cursive;
+}
+
+.ff-3 {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.ff-4 {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-weight: normal;
+}
+
+.li-images {
+  width: 100%;
+  height: 300px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 12%;
+  border-bottom-left-radius: 12%;
+}
+
+.img-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.jos-ziee {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.jos-ziee:hover {
+  border: 3px solid hsla(259 94% 51%);
+}
+
+.color-pri-text {
+  color: var(--primary);
+}
+
+.vis {
+  font-weight: bold;
+  font-size: 1.8754rem;
+}
+
+.tech {
+  font-weight: bold;
+  font-size: 2.25rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  align-items: center;
+  z-index: 3;
+}
+
+header .container {
+  padding-left: 1rem;
+}
+
+main {
+  margin-top: 4rem;
+}
+
+section.intro {
+  background: linear-gradient(hsl(259 94% 51%), hsl(314 100% 47.1%));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 3.5rem;
+}
+
+section.intro .intro-div {
+  padding-top: 3.125rem;
+  padding-bottom: 10.1254rem;
+}
+
+section.intro h2 span {
+  font-weight: bold;
+  font-size: 3.25rem;
+}
+
+section.intro .vission {
+  padding: 0.5rem;
+  border: 2px solid var(--pri-bd);
+  border-radius: 3px;
+}
+
+.btn {
+  line-height: 1rem;
+  text-align: center;
+  border-color: transparent;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: hsla(259 94% 51%);
+}
+
+section.tech-views {
+  margin-top: -11rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.tech-views .contents {
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+  border: 1px solid #d2d5d8;
+  padding-bottom: 80px;
+}
+
+section.tech-views .container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0.75rem;
+}
+
+section.tech-views .tham h3 {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  width: 89%;
+}
+
+section.tech-views .components {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bb-2 {
+  background: rgb(229, 151, 231);
+}
+
+section.tech-views .tham {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+section.tech-views ul {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-row-gap: 8px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+}
+
+section.tech-views .techs ul li {
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 60%);
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: white;
+  cursor: pointer;
+  width: 17rem;
+}
+
+.body > p {
+  height: 8rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+section.tech-views .techs ul li h3 {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--secondary-txt);
+  font-weight: bold;
+}
+
+.mr-ii {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+section.tech-views .techs .like {
+  align-items: center;
+}
+
+/* comment button */
+
+section.tech-views .techs .comments {
+  background: hsla(259 94% 51%);
+}
+
+section.tech-views .techs {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* popup styling  */
+.pop--container {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  z-index: 40;
+  width: 1000px;
+  height: 650px;
+  padding: 10px;
+  color: #000;
+  text-align: center;
+  border: 1px solid rgb(90, 89, 89);
+  border-radius: 7px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  box-shadow:
+    -2px -2px 10px 0 rgba(243, 243, 242, 0.6),
+    -2px -2px 5px 0 #706f7299,
+    7px 7px 10px 0 rgba(77, 161, 77, 0.133),
+    4px 4px 5px 0 rgba(179, 69, 69, 0.801);
+}
+
+.pop--container.active {
+  transform: translate(-50%, -50%) scale(1);
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.over--lay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+  background-color: rgba(212, 212, 212, 0.904);
+}
+
+.over--lay.active {
+  opacity: 1;
+  pointer-events: none;
+}
+
+#close {
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(129, 127, 127);
+}
+
+.pop--img {
+  border: 1px solid rgb(143, 140, 140);
+  border-radius: 8px;
+  width: 850px;
+  height: 400px;
+  margin: 10px auto;
+}
+
+.pop--img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.pop--tit {
+  font-size: 20px;
+  color: rgba(48, 46, 46, 0.733);
+  padding: 5px 14px;
+}
+
+.pop--des {
+  color: rgba(48, 46, 46, 0.733);
+  font-size: 16px;
+  padding: 14px;
+}
+
+.see--comment {
+  padding: 10px 20px;
+}
+
+.see--comment div {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  color: rgba(48, 46, 46, 0.733);
+}
+
+.date,
+.name {
+  color: rgb(198, 96, 212);
+  font-weight: bold;
+  padding: 0 10px;
+  border: 0.1px solid lightgray;
+  border-radius: 0 50px 50px 0;
+}
+
+.comemt {
+  color: rgba(48, 46, 46, 0.733);
+}
+
+.count--com {
+  font-size: 20px;
+  color: rgba(48, 46, 46, 0.733);
+  font-weight: bold;
+}
+
+.pop--put {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.pop--put .error {
+  width: 30%;
+  padding: 6px;
+  margin-bottom: -19px;
+  color: green;
+  padding-left: 10px;
+  border: 1px solid rgb(11, 238, 11);
+  background-color: rgba(201, 241, 201, 0.925);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.pop--put h3 {
+  color: rgba(48, 46, 46, 0.733);
+  font-size: 20px;
+  padding: 14px;
+}
+
+.pop--put input {
+  width: 30%;
+  font-size: 16px;
+  color: #000;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.pop--put .insight {
+  height: 90px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.pop--put button {
+  color: rgba(48, 46, 46, 0.733);
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  border-radius: 0  50px 50px 0;
+  width: 13%;
+  padding: 8px;
+  transform: translateX(-5rem);
+}
+
+.pop--put button:hover {
+  background-color: rgba(178, 84, 190, 0.719);
+}
+
+@media screen and (min-width: 992px) {
+  section.tech-views ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    max-width: 1200px;
+  }
+
+  section.tech-views .techs ul li {
+    width: 19rem;
+  }
+
+  .show {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .gap-bg {
+    gap: 18px;
+  }
+
+  section.intro .vission {
+    max-width: 700px;
+  }
+
+  section.intro h2 span {
+    font-weight: bold;
+    font-size: 6.25rem;
+  }
+
+  section.intro .intro-div {
+    padding-top: 5.125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section.tech-views .techs ul li {
+    width: 24rem;
+  }
+}

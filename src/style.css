@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pop--container {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  z-index: 40;
+  width: 1000px;
+  height: 650px;
+  padding: 10px;
+  color: #000;
+  text-align: center;
+  border: 1px solid rgb(90, 89, 89);
+  border-radius: 7px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  box-shadow:
+    -2px -2px 10px 0 rgba(243, 243, 242, 0.6),
+    -2px -2px 5px 0 #706f7299,
+    7px 7px 10px 0 rgba(77, 161, 77, 0.133),
+    4px 4px 5px 0 rgba(179, 69, 69, 0.801);
+}
+
+.pop--container.active {
+  transform: translate(-50%, -50%) scale(1);
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.over--lay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+  background-color: rgba(212, 212, 212, 0.904);
+}
+
+.over--lay.active {
+  opacity: 1;
+  pointer-events: none;
+}
+
+#close {
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(129, 127, 127);
+}
+
+.pop--img {
+  border: 1px solid red;
+  border-radius: 8px;
+  width: 850px;
+  height: 400px;
+  margin: 10px auto;
+}
+
+.pop--tit {
+  font-size: 20px;
+  color: rgba(48, 46, 46, 0.733);
+  padding: 5px 14px;
+}
+
+.pop--des {
+  color: rgba(48, 46, 46, 0.733);
+  font-size: 16px;
+  padding: 14px;
+}
+
+.see--comment {
+  padding: 10px 20px;
+}
+
+.see--comment div {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  color: rgba(48, 46, 46, 0.733);
+}
+
+.date,
+.name {
+  color: rgb(198, 96, 212);
+  font-weight: bold;
+  padding: 0 10px;
+  border: 0.1px solid lightgray;
+  border-radius: 0 50px 50px 0;
+}
+
+.comemt {
+  color: rgba(48, 46, 46, 0.733);
+}
+
+.count--com {
+  font-size: 20px;
+  color: rgba(48, 46, 46, 0.733);
+  font-weight: bold;
+}
+
+.pop--put {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.pop--put .error {
+  width: 30%;
+  padding: 6px;
+  margin-bottom: -19px;
+  color: green;
+  padding-left: 10px;
+  border: 1px solid rgb(11, 238, 11);
+  background-color: rgba(201, 241, 201, 0.925);
+}
+
+.pop--put h3 {
+  color: rgba(48, 46, 46, 0.733);
+  font-size: 20px;
+  padding: 14px;
+}
+
+.pop--put input {
+  width: 30%;
+  font-size: 16px;
+  color: #000;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.pop--put .insight {
+  height: 90px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+
+.pop--put button {
+  color: rgba(48, 46, 46, 0.733);
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  border-radius: 0  50px 50px 0;
+  width: 13%;
+  padding: 8px;
+  transform: translateX(-5rem);
+}
+
+.pop--put button:hover {
+  background-color: rgba(178, 84, 190, 0.719);
+}
