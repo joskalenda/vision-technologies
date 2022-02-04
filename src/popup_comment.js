@@ -1,4 +1,4 @@
-import { addComment, CommentCounter } from "./set_api";
+import { CreatComment } from "./set_api";
 
 const newDate = () => {
   const date = new Date();
@@ -44,7 +44,7 @@ const createPopup = (object) => {
   SubmitButton.addEventListener('click', (event) => {
     event.preventDefault();
     let div_com_par = document.getElementById('comm-div');
-    addComment(object.id, usernameInput.value, commentInput.value);
+    CreatComment(object.id, usernameInput.value, commentInput.value);
     const comment_par = document.querySelector('.no_comment');
     if (comment_par.innerHTML === 'No comment found !') {
       comment_par.innerHTML = '';
