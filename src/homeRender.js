@@ -1,4 +1,5 @@
 import createPopup from './popup_comment.js';
+import { getComments, CommentCounter, ShowComment } from './set_api.js';
 
 const renderTech = (technologies) => {
   const ul = document.querySelector('.vission-tech');
@@ -12,10 +13,10 @@ const renderTech = (technologies) => {
     <p class="des ff-4 mr-ii">${tech.summary.length < 100 ? tech.summary : `${tech.summary.substring(0, 100)}...`}</p>
     <div class="like ff-4 flex gap">
     <i class="far fa-heart"></i>
-    <span class="counter">0 Likes</span>
+    <span class="counter_likes">0 Likes</span>
     </div>
     <div class="btn-container mr-ii">
-    <button id="${tech.id}" type="button" class="ff-4 card-btn btn comments color-white">comments</button>
+    <button data-id="${tech.id}" type="button" class="ff-4 card-btn btn comments color-white">comments</button>
     </div>
     </div>
     </div>
@@ -23,10 +24,14 @@ const renderTech = (technologies) => {
   });
 
   document.querySelectorAll('.card-btn').forEach((cardBtn, i) => {
-    cardBtn.addEventListener('click', () => {
+    cardBtn.addEventListener('click', async () => {
       const popupContainer = document.querySelector('.pop--container');
       popupContainer.classList.add('active');
       createPopup(technologies[i]);
+
+      const tech = await getComments(technologies[i].id);
+      ShowComment(tech);
+      CommentCounter(tech);
     });
   });
 };
