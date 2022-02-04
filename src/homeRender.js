@@ -1,5 +1,7 @@
 import createPopup from './popup_comment.js';
 
+import { getComments } from './set_api.js';
+
 const renderTech = (technologies) => {
   const ul = document.querySelector('.vission-tech');
   ul.innerHTML = '';
@@ -15,7 +17,7 @@ const renderTech = (technologies) => {
     <span class="counter">0 Likes</span>
     </div>
     <div class="btn-container mr-ii">
-    <button id="${tech.id}" type="button" class="ff-4 card-btn btn comments color-white">comments</button>
+    <button data-id="${tech.id}" type="button" class="ff-4 card-btn btn comments color-white">comments</button>
     </div>
     </div>
     </div>
@@ -27,6 +29,7 @@ const renderTech = (technologies) => {
       const popupContainer = document.querySelector('.pop--container');
       popupContainer.classList.add('active');
       createPopup(technologies[i]);
+      getComments(cardBtn.getAttribute('data-id'));
     });
   });
 };
