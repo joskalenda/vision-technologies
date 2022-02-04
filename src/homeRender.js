@@ -1,5 +1,6 @@
-import createPopup from './popup_comment.js';
+/* eslint-disable import/no-cycle */
 
+import createPopup from './popup_comment.js';
 import { getComments } from './set_api.js';
 
 const renderTech = (technologies) => {
@@ -29,7 +30,7 @@ const renderTech = (technologies) => {
       const popupContainer = document.querySelector('.pop--container');
       popupContainer.classList.add('active');
       createPopup(technologies[i]);
-      getComments(cardBtn.getAttribute('data-id'));
+      getComments(technologies[i].id);
     });
   });
 };

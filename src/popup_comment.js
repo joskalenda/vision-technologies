@@ -1,4 +1,5 @@
-import { CreatComment } from "./set_api";
+/* eslint-disable import/no-cycle */
+import { addComment } from './set_api.js';
 
 const newDate = () => {
   const date = new Date();
@@ -27,9 +28,9 @@ const createPopup = (object) => {
     <div class="pop--put">
       <h3>Leave a Comment !</h3>
       <p class="error" >display error</p>
-      <input id ="usernameInput" type="text" placeholder="Inter your name" maxlength="15">
-      <input id = "commentInput" class="insight" type="text" placeholder="Enter your insigths">
-      <button id= "btn" type="button">Comment</button> 
+      <input id="usernameInput" type="text" placeholder="Inter your name" maxlength="15">
+      <input id="commentInput" class="insight" type="text" placeholder="Enter your insigths">
+      <button id="btn" type="button">Comment</button> 
     </div>
     `;
   container.appendChild(popupCard);
@@ -38,22 +39,21 @@ const createPopup = (object) => {
   closeButtons.addEventListener('click', () => {
     document.querySelector('.pop--container.active').classList.remove('active');
   });
+
   const SubmitButton = document.getElementById('btn');
-  // console.log(SubmitButton);
+  const usernameInput = document.getElementById('usernameInput');
+  const commentInput = document.getElementById('commentInput');
+  const divComPar = document.getElementById('comm-div');
+  const commentPar = document.querySelector('.no_comment');
 
   SubmitButton.addEventListener('click', (event) => {
     event.preventDefault();
-    let div_com_par = document.getElementById('comm-div');
-    CreatComment(object.id, usernameInput.value, commentInput.value);
-    const comment_par = document.querySelector('.no_comment');
-    if (comment_par.innerHTML === 'No comment found !') {
-      comment_par.innerHTML = '';
+    addComment(object.id, usernameInput.value, commentInput.value);
+    if (commentPar.innerHTML === 'No comment found !') {
+      commentPar.innerHTML = '';
     }
-    div_com_par.innerHTML += `<p> <span class="date"> ${newDate()} </span> <span class="name"> ${usernameInput.value.trim()} </span> <span class="comment"> ${commentInput.value} </span></p> `;
+    divComPar.innerHTML += `<p> <span class="date"> ${newDate()} </span> <span class="name"> ${usernameInput.value.trim()} </span> <span class="comment"> ${commentInput.value} </span></p> `;
   });
-
 };
-
-
 
 export default createPopup;
