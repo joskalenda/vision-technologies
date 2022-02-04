@@ -1,7 +1,5 @@
-/* eslint-disable import/no-cycle */
-
 import createPopup from './popup_comment.js';
-import { getComments } from './set_api.js';
+import { getComments, CommentCounter, ShowComment } from './set_api.js';
 
 const renderTech = (technologies) => {
   const ul = document.querySelector('.vission-tech');
@@ -26,11 +24,14 @@ const renderTech = (technologies) => {
   });
 
   document.querySelectorAll('.card-btn').forEach((cardBtn, i) => {
-    cardBtn.addEventListener('click', () => {
+    cardBtn.addEventListener('click', async () => {
       const popupContainer = document.querySelector('.pop--container');
       popupContainer.classList.add('active');
       createPopup(technologies[i]);
-      getComments(technologies[i].id);
+
+      const tech = await getComments(technologies[i].id);
+      ShowComment(tech);
+      CommentCounter(tech);
     });
   });
 };

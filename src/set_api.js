@@ -1,6 +1,3 @@
-/* eslint-disable import/no-cycle */
-import renderTech from './homeRender.js';
-
 const BASE_URL = 'https://api.spaceflightnewsapi.net/v3/articles';
 const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const commentsUrl = '/apps/Tl04OrbFyu6fxKeYxZ5Q/comments';
@@ -8,13 +5,11 @@ const commentsUrl = '/apps/Tl04OrbFyu6fxKeYxZ5Q/comments';
 
 export const getTechs = async () => {
   const response = await fetch(`${BASE_URL}`);
-  response.json().then((json) => {
-    renderTech(json);
-  });
+  return response.json();
 };
 
 export const addComment = async (id, user, comment) => {
-  fetch(`${involvementApi}${commentsUrl}`,
+  await fetch(`${involvementApi}${commentsUrl}`,
     {
       method: 'POST',
       headers: {
@@ -28,7 +23,7 @@ export const addComment = async (id, user, comment) => {
     });
 };
 
-const ShowComment = (comment) => {
+export const ShowComment = (comment) => {
   if (!comment.length) {
     const commentPar = document.querySelector('.no_comment');
     commentPar.innerHTML = 'No comment found !';
@@ -40,7 +35,7 @@ const ShowComment = (comment) => {
   }
 };
 
-const CommentCounter = (comment) => {
+export const CommentCounter = (comment) => {
   if (comment.length) {
     const CounterCom = document.querySelector('.count--com');
     CounterCom.innerHTML += `Comments (${comment.length})`;
@@ -50,6 +45,5 @@ const CommentCounter = (comment) => {
 export const getComments = async (incomingItemId) => {
   const request = await fetch(`${involvementApi}${commentsUrl}?item_id=${incomingItemId}`);
   const tech = await request.json();
-  ShowComment(tech);
-  CommentCounter(tech);
+  return tech;
 };

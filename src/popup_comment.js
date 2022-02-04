@@ -1,5 +1,4 @@
-/* eslint-disable import/no-cycle */
-import { addComment } from './set_api.js';
+import { addComment, getComments } from './set_api.js';
 
 const newDate = () => {
   const date = new Date();
@@ -30,7 +29,7 @@ const createPopup = (object) => {
       <p class="error" >display error</p>
       <input id="usernameInput" type="text" placeholder="Inter your name" maxlength="15">
       <input id="commentInput" class="insight" type="text" placeholder="Enter your insigths">
-      <button id="btn" type="button">Comment</button> 
+      <button id="btn" type="button">Comment</button>
     </div>
     `;
   container.appendChild(popupCard);
@@ -46,9 +45,14 @@ const createPopup = (object) => {
   const divComPar = document.getElementById('comm-div');
   const commentPar = document.querySelector('.no_comment');
 
-  SubmitButton.addEventListener('click', (event) => {
+  SubmitButton.addEventListener('click', async (event) => {
     event.preventDefault();
-    addComment(object.id, usernameInput.value, commentInput.value);
+    await addComment(object.id, usernameInput.value, commentInput.value);
+    const result = await getComments(object.id);
+
+    const CounterCom = document.querySelector('.count--com');
+    CounterCom.innerHTML = `Comments (${result.length})`;
+
     if (commentPar.innerHTML === 'No comment found !') {
       commentPar.innerHTML = '';
     }
