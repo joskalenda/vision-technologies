@@ -1,4 +1,3 @@
-![](https://img.shields.io/badge/MovieSpot-green)
 # vision-technologies
 this project is talking about vision technologies that we are going to launch in the new few coming years, this is going to help users to some daily tasks and activities.  The first feature among a million of this project is to update the user on every release of new technologies in the whole world It will give the user the ability to extract an event or anything posted from a link provided to the platform It will be an Open-source project allowing every dev to collaborate on some different projects Stay tuned for more features from our company
 
