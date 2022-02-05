@@ -278,12 +278,17 @@ section.tech-views ul {
 
 section.tech-views .techs ul li {
   box-shadow: 0 2px 8px 0 rgb(0 0 0 / 60%);
+  transition: 500ms ease-in;
   margin: 0 auto;
   border-radius: 8px;
   padding: 0.75rem;
   background: white;
   cursor: pointer;
   width: 17rem;
+}
+
+section.tech-views .techs ul li:hover {
+  transform: scale(0.95);
 }
 
 .body > p {
