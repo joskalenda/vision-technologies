@@ -1,5 +1,10 @@
 import createPopup from './popup_comment.js';
-import { getComments, CommentCounter, ShowComment } from './set_api.js';
+import {
+  getComments,
+  CommentCounter,
+  ShowComment,
+} from './set_api.js';
+
 import { getLikes, postLike } from './card_like.js';
 
 const renderTech = async (technologies) => {
@@ -33,6 +38,7 @@ const renderTech = async (technologies) => {
     const heartIcon = cardDiv.querySelector('.like-heart');
     heartIcon.addEventListener('click', async () => {
       const likeCounter = cardDiv.querySelector('.likes-counter');
+      // add likes fucntion here
       count += 1;
       await postLike(heartIcon.id, count);
       likeCounter.innerHTML = `${count} Likes`;

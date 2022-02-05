@@ -1,7 +1,6 @@
 const BASE_URL = 'https://api.spaceflightnewsapi.net/v3/articles';
 const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const commentsUrl = '/apps/Tl04OrbFyu6fxKeYxZ5Q/comments';
-// const likesUrl = '/apps/Uinv3HFYXneji5y5pk1g/likes';
 
 export const getTechs = async () => {
   const response = await fetch(`${BASE_URL}`);
