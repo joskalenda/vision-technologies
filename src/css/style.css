@@ -259,6 +259,12 @@ section.tech-views .tham {
   display: none;
 }
 
+footer ul {
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
 section.tech-views ul {
   display: grid;
   grid-template-columns: auto;
@@ -420,13 +426,6 @@ section.tech-views .techs {
   padding: 10px 20px;
 }
 
-.see--comment div {
-  display: flex;
-  gap: 10px;
-  font-size: 18px;
-  color: rgba(48, 46, 46, 0.733);
-}
-
 .date,
 .name {
   color: rgb(198, 96, 212);
@@ -485,6 +484,33 @@ section.tech-views .techs {
   height: 90px;
   border: 1px solid lightgray;
   border-radius: 6px;
+}
+
+footer {
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  margin: 0.3em;
+  background: linear-gradient(hsl(259 94% 51%), hsl(314 100% 47.1%));
+}
+
+footer div {
+  justify-content: space-between;
+}
+
+footer ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.see--comment div {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  color: rgba(48, 46, 46, 0.733);
 }
 
 .space-between {

@@ -13,7 +13,7 @@ this project is talking about vision technologies that we are going to launch in
 
 ## Live Demo
 
-[See Demo]()
+[See Demo](https://practical-wright-2112a8.netlify.app/)
 
 
 Additional description about the project and its features.
@@ -22,8 +22,8 @@ Additional description about the project and its features.
 
 - Major languages (HTML, CSS, JavaScript)
 
-- Technologies used 
-  
+- Technologies used
+
   ``` bash
   - Webpack(Code Bundlng et al)
   - Jest(for testing)
