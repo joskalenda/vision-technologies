@@ -21,3 +21,5 @@ export const postLike = async (id, number) => {
   const result = await response.text();
   return result;
 };
+
+export const likesFunction = (like) => like + 1;

@@ -5,7 +5,7 @@ import {
   ShowComment,
 } from './set_api.js';
 
-import { getLikes, postLike } from './card_like.js';
+import { getLikes, postLike, likesFunction } from './card_like.js';
 
 const renderTech = async (technologies) => {
   const ul = document.querySelector('.vission-tech');
@@ -39,7 +39,7 @@ const renderTech = async (technologies) => {
     heartIcon.addEventListener('click', async () => {
       const likeCounter = cardDiv.querySelector('.likes-counter');
       // add likes fucntion here
-      count += 1;
+      count = likesFunction(count);
       await postLike(heartIcon.id, count);
       likeCounter.innerHTML = `${count} Likes`;
     });
