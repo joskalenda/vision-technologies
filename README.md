@@ -10,7 +10,7 @@ this project is talking about vision technologies that we are going to launch in
 > || ![Screenshot1](/src/assets/mobile.png) || ![screen2](/src/assets/desk.png) || 
 
 ## Video Presentation
-[Presentation Link]()
+[Presentation Link](https://user-images.githubusercontent.com/77843050/152640548-112f81c6-80f5-4e3c-903e-ace5f942cba4.mp4)
 
 ## Live Demo
 
